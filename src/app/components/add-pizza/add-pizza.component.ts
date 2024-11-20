@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Pizza } from '../../../models/pizza.model';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-add-pizza',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './add-pizza.component.html',
   styleUrl: './add-pizza.component.css'
 })

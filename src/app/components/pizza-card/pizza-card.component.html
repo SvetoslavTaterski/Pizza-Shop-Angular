@@ -1,1 +1,6 @@
-<p>pizza-card works!</p>
+<div class="pizza-card">
+  <img [src]="pizza.image" alt="{{ pizza.name }}" class="pizza-image" />
+  <h3>{{ pizza.name }}</h3>
+  <p>{{ pizza.description }}</p>
+  <button (click)="deletePizza()">Delete</button>
+</div>

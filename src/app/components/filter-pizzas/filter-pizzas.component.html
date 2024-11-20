@@ -1,1 +1,4 @@
-<p>filter-pizzas works!</p>
+<form (ngSubmit)="filterPizzas()">
+    <input type="text" placeholder="Filter by Name" [(ngModel)]="criteria" name="criteria">
+    <button type="submit">Filter Pizzas</button>
+  </form>

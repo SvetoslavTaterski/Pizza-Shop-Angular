@@ -17,8 +17,8 @@ export class AppComponent {
   title = 'Pizza-Shop';
   
   pizzas: Pizza[] = [
-    { id: 1, name: 'Margherita', image: 'link-to-image', description: 'Classic Cheese Pizza' },
-    { id: 2, name: 'Pepperoni', image: 'link-to-image', description: 'Pepperoni Pizza' },
+    { id: 1, name: 'Margherita', image: 'assets/images/the-best-homemade-margherita-pizza-1-4-500x500.jpg', description: 'Classic Cheese Pizza' },
+    { id: 2, name: 'Pepperoni', image: 'assets/images/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-8f256746d649404baa36a44.jpg', description: 'Pepperoni Pizza' },
   ];
 
   addPizza(newPizza: Pizza) {

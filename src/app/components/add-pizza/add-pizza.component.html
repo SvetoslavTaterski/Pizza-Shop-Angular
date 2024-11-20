@@ -1,1 +1,6 @@
-<p>add-pizza works!</p>
+<form (ngSubmit)="addPizza()" #pizzaForm="ngForm">
+    <input type="text" placeholder="Pizza Name" [(ngModel)]="newPizza.name" name="name" required>
+    <input type="text" placeholder="Image URL" [(ngModel)]="newPizza.image" name="image" required>
+    <textarea placeholder="Description" [(ngModel)]="newPizza.description" name="description" required></textarea>
+    <button type="submit">Add Pizza</button>
+  </form>

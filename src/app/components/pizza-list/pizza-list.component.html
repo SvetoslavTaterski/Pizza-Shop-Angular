@@ -1,1 +1,8 @@
-<p>pizza-list works!</p>
+<ul>
+  <li *ngFor="let pizza of pizzas">
+    <app-pizza-card
+      [pizza]="pizza"
+      (deletePizzaEvent)="deletePizza($event)"
+    ></app-pizza-card>
+  </li>
+</ul>

@@ -1,10 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Pizza } from '../../../models/pizza.model';
+import { PizzaCardComponent } from "../pizza-card/pizza-card.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pizza-list',
   standalone: true,
-  imports: [],
+  imports: [PizzaCardComponent, CommonModule],
   templateUrl: './pizza-list.component.html',
   styleUrl: './pizza-list.component.css'
 })
