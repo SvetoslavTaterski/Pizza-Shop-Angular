@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter-pizzas',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './filter-pizzas.component.css'
 })
 export class FilterPizzasComponent {
+  criteria: string = '';
+  @Output() filterCriteriaEvent = new EventEmitter<string>();
 
+  filterPizzas() {
+    this.filterCriteriaEvent.emit(this.criteria);
+  }
 }

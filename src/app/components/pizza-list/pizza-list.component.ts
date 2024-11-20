@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Pizza } from '../../../models/pizza.model';
 
 @Component({
   selector: 'app-pizza-list',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './pizza-list.component.css'
 })
 export class PizzaListComponent {
+  @Input() pizzas: Pizza[] = [];
+  @Output() deletePizzaEvent = new EventEmitter<number>();
 
+  deletePizza(pizzaId: number) {
+    this.deletePizzaEvent.emit(pizzaId);
+  }
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Pizza } from '../../../models/pizza.model';
 
 @Component({
   selector: 'app-add-pizza',
@@ -9,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AddPizzaComponent {
 
+  newPizza: Pizza = { id: 0, name: '', image: '', description: '' };
+  @Output() newPizzaEvent = new EventEmitter<Pizza>();
+
+  addPizza() {
+    this.newPizzaEvent.emit({...this.newPizza});
+    this.newPizza = { id: 0, name: '', image: '', description: '' }; // Reset form
+  }
 }
