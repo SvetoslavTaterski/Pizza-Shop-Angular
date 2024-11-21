@@ -1,0 +1,24 @@
+form {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  input, button {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    flex-grow: 1;
+  }
+  
+  button {
+    flex-grow: 0;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff4500;
+  }
