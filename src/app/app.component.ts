@@ -20,16 +20,24 @@ export class AppComponent {
     { id: 1, name: 'Margherita', image: 'assets/images/the-best-homemade-margherita-pizza-1-4-500x500.jpg', description: 'Classic Cheese Pizza' },
     { id: 2, name: 'Pepperoni', image: 'assets/images/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-8f256746d649404baa36a44.jpg', description: 'Pepperoni Pizza' },
   ];
+  
+  filteredPizzas: Pizza[] = [...this.pizzas];
 
   addPizza(newPizza: Pizza) {
     this.pizzas.push({...newPizza, id: this.pizzas.length + 1});
+    this.filteredPizzas = [...this.pizzas];
   }
 
   deletePizza(pizzaId: number) {
     this.pizzas = this.pizzas.filter(pizza => pizza.id !== pizzaId);
+    this.filteredPizzas = this.filteredPizzas.filter(pizza => pizza.id !== pizzaId);
   }
 
   filterPizzas(criteria: string) {
-    this.pizzas = this.pizzas.filter(pizza => pizza.name.toLowerCase().includes(criteria.toLowerCase()));
+    if (criteria) {
+      this.filteredPizzas = this.pizzas.filter(pizza => pizza.name.toLowerCase().includes(criteria.toLowerCase()));
+    } else {
+      this.filteredPizzas = [...this.pizzas];
+    }
   }
 }

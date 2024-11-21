@@ -2,5 +2,5 @@
   <app-header></app-header>
   <app-add-pizza (newPizzaEvent)="addPizza($event)"></app-add-pizza>
   <app-filter-pizzas (filterCriteriaEvent)="filterPizzas($event)"></app-filter-pizzas>
-  <app-pizza-list [pizzas]="pizzas" (deletePizzaEvent)="deletePizza($event)"></app-pizza-list>
+  <app-pizza-list [pizzas]="filteredPizzas" (deletePizzaEvent)="deletePizza($event)"></app-pizza-list>
 </div>
